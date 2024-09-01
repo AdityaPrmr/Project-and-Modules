@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <title>editor</title>
+    <script src="editor.js" defer></script>
+    <style>
+      .core
+      {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        min-width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body
+      {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        min-width: 100%;
+      }
+
+      .editor
+      {
+        background-color: aqua;
+        width: 50%;
+        position: absolute;
+        top:0;
+        left: 0;
+        min-height: 100%;
+        padding: 20px;
+        padding-bottom: 0;
+        box-sizing: border-box;
+      }
+
+      .display
+      {
+        width: 50%;
+        position: absolute;
+        top:0;
+        right: 0;
+        min-height: 100%;
+      }
+      .codeArea
+      {
+        border-radius: 5px;
+        height: 100%;
+        width: 100%;
+      }
+      .splitDisplay
+      {
+        display: block;
+        height: auto;
+        border-radius: 5px;
+        width: 100%;
+        line-height: 25px;
+        font: 500;
+        font-family: cursive;
+        letter-spacing: 0.5px;
+        display: none;
+      }
+
+      .head
+      {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: transparent;
+        color: black;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h4 class="head" id="head"></h4>
+    <div class="container core">
+        <div class="editor">
+            <textarea class="codeArea" rows="24" id="codeArea" style="line-height: 25px;font: 600;font-family: cursive;letter-spacing: 0.5px;">
+
+            </textarea><br id="splitDisplayBr" style="display: none;"/>
+            <textarea class="codeArea" rows="24" id="codeAreaCSS" style="line-height: 25px;font: 500;font-family: cursive;letter-spacing: 0.5px;">
+
+            </textarea>
+            <textarea class="codeArea" rows="24" id="codeAreaJS" style="line-height: 25px;font: 500;font-family: cursive;letter-spacing: 0.5px;">
+
+            </textarea>
+            <!-- <textarea rows="11" id="codeArea2" style="height: auto;border-radius: 5px;width: 100%;line-height: 25px;font: 500;font-family: cursive;letter-spacing: 0.5px;display: none;">
+
+            </textarea><br/>
+            <textarea rows="11" id="codeAreaJS2" style="height: auto;border-radius: 5px;width: 100%;line-height: 25px;font: 500;font-family: cursive;letter-spacing: 0.5px;display: none;">
+
+            </textarea> -->
+            <br/>
+            <div style="display: flex;gap: 18px;">
+              <button type="button" onclick="render()">SUBMIT</button>
+              <button type="button" onclick="html()">HTML</button>
+              <button type="button" onclick="css()">CSS</button>
+              <button type="button" onclick="js()">JAVASCRIPT</button>
+            </div>  
+        </div>
+        <div class="display">
+          <div id="displayHTML">
+
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
