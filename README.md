@@ -1,42 +1,34 @@
-# 📊 YouTube Comment Sentiment Analysis
+📊 YouTube Comment Sentiment Analysis
+🚀 Analyze YouTube comments with sentiment analysis to gain insights into audience opinions!
 
-🚀 **Analyze YouTube comments with sentiment analysis to gain insights into audience opinions!**
+🔍 Overview
+This Python-based project extracts comments from a YouTube video using the YouTube Data API v3, processes them for sentiment analysis using NLTK's SentimentIntensityAnalyzer, and provides key insights such as:
 
----
+Positive, Negative, and Neutral Sentiment Distribution
 
-## 🔍 Overview
+Top 3 Most Positive & Negative Comments
 
-This Python-based project extracts comments from a YouTube video using the **YouTube Data API v3**, processes them for **sentiment analysis** using **NLTK's SentimentIntensityAnalyzer**, and provides key insights such as:
-- **Positive, Negative, and Neutral Sentiment Distribution**
-- **Top 3 Most Positive & Negative Comments**
-- **Most Frequently Used Words in Comments**
+Most Frequently Used Words in Comments
 
----
+🛠 Features
+✅ Extract YouTube comments in bulk
+✅ Perform sentiment analysis (Positive, Neutral, Negative)
+✅ Identify trending words in the comments
+✅ Rank top & bottom comments based on sentiment score
+✅ Handles large datasets efficiently
 
-## 🛠 Features
+📦 Installation
+1️⃣ Clone the repository:
 
-✅ **Extract YouTube comments** in bulk  
-✅ **Perform sentiment analysis** (Positive, Neutral, Negative)  
-✅ **Identify trending words** in the comments  
-✅ **Rank top & bottom comments** based on sentiment score  
-✅ **Handles large datasets efficiently**
-
----
-
-## 📦 Installation
-
-1️⃣ **Clone the repository:**
-```sh
+Copy
 git clone https://github.com/AdityaPrmr/Youtube-Comment-Sentiment-Analysis.git
 cd Youtube-Comment-Sentiment-Analysis
 2️⃣ Install dependencies:
 
-sh
 Copy
 pip install google-api-python-client nltk
 3️⃣ Download NLTK datasets (if not already installed):
 
-python
 Copy
 import nltk
 nltk.download("stopwords")
@@ -52,7 +44,6 @@ Replace api_key = "" with your actual API Key.
 1️⃣ Extract YouTube Comments:
 Run the script to fetch comments:
 
-sh
 Copy
 python fetch_comments.py
 The comments will be saved in Comments.txt.
@@ -60,7 +51,6 @@ The comments will be saved in Comments.txt.
 2️⃣ Perform Sentiment Analysis:
 Run the analysis script:
 
-sh
 Copy
 python analyze_comments.py
 This script will:
@@ -72,7 +62,6 @@ Display the most positive and negative comments.
 Show the top 20 most frequently used words.
 
 📜 Project Structure
-plaintext
 Copy
 📂 Youtube-Comment-Sentiment-Analysis
 │── fetch_comments.py   # Fetches YouTube comments & saves them in Comments.txt
